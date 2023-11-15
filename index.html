@@ -31,45 +31,34 @@
     </style>
   </noscript>
   <style>
-    .icon-right {
-      position: absolute;
-      top: 40%;
-      right: -10%;
-      transform: translate(-50%, -50%);
-      width: 80px;
-      height: 60px;
-      cursor: pointer;
+    /* Style for the loading spinner */
+    .loader {
+      border: 10px solid rgba(255, 255, 255, 0.3);
+      border-top: 10px solid #3498db;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      margin-top: -20px;
+      margin-left: -20px;
+      z-index: 9999;
+      /* Initially hidden */
     }
 
-    .arrow-right {
-      position: absolute;
-      top: 25px;
-      width: 90%;
-      height: 10px;
-      background-color: #3b6eb0;
-      box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    /* Keyframes for the spin animation */
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
     }
 
-    .arrow-right::after,
-    .arrow-right::before {
-      content: '';
-      position: absolute;
-      width: 60%;
-      height: 10px;
-      right: -8px;
-      background-color: #3b6eb0;
-    }
-
-    .arrow-right::after {
-      top: -12px;
-      transform: rotate(45deg);
-    }
-
-    .arrow-right::before {
-      top: 12px;
-      box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
-      transform: rotate(-45deg);
-    }
 
     /* Custom styles for slick dots */
     .slick-dots {
@@ -106,6 +95,7 @@
     }
   </style>
 </head>
+<div class="loader" id="loader"></div>
 
 <body id="top">
   <header class="d-print-none">
@@ -581,21 +571,23 @@
       </div>
     </div>
   </footer>
+
   <script src="scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
   <script src="scripts/aos.js?ver=1.2.0"></script>
   <script src="scripts/main.js?ver=1.2.0"></script>
-  <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
-    integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
   <script>
+
+    $(window).on('load', function () {
+      $('#loader').fadeOut("slow");
+    });
     $(document).ready(function () {
       $('.carousel').slick({
         infinite: true,
         dots: true,
-
-        nextArrow: `<div class="icon-right"><div class="arrow-right" style="scale:0.50"></div></div>`,
-        prevArrow: `<div class="icon-right" style="left:-10px"><div class="arrow-right" style="transform:rotateY(180deg);scale:0.50"></div></div>`,
+        arrows: false
       });
     });
     var progressBarElements = document.getElementsByClassName('progress-bar');

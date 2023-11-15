@@ -21,7 +21,7 @@
   <link href="css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
   <link href="css/aos.css?ver=1.2.0" rel="stylesheet">
   <link href="css/main.css?ver=1.2.0" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <noscript>
     <style type="text/css">
       [data-aos] {
@@ -30,6 +30,81 @@
       }
     </style>
   </noscript>
+  <style>
+    .icon-right {
+      position: absolute;
+      top: 40%;
+      right: -10%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 60px;
+      cursor: pointer;
+    }
+
+    .arrow-right {
+      position: absolute;
+      top: 25px;
+      width: 90%;
+      height: 10px;
+      background-color: #3b6eb0;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+    }
+
+    .arrow-right::after,
+    .arrow-right::before {
+      content: '';
+      position: absolute;
+      width: 60%;
+      height: 10px;
+      right: -8px;
+      background-color: #3b6eb0;
+    }
+
+    .arrow-right::after {
+      top: -12px;
+      transform: rotate(45deg);
+    }
+
+    .arrow-right::before {
+      top: 12px;
+      box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+      transform: rotate(-45deg);
+    }
+
+    /* Custom styles for slick dots */
+    .slick-dots {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .slick-dots li {
+      margin: 0 5px;
+    }
+
+    .slick-dots button {
+      font-size: 12px;
+      line-height: 1.5;
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .slick-dots button:hover {
+      background-color: #ddd;
+    }
+
+    .slick-dots .slick-active button {
+      background-color: #3b6eb0;
+      color: #fff;
+    }
+  </style>
 </head>
 
 <body id="top">
@@ -282,216 +357,199 @@
       <div class="page-break"></div>
       <div id="project" class="px-3 px-lg-4 pb-4">
         <h2 class="h3 mb-4">Project</h2>
-        <div>
-          <div class="item">
-            <div class="d-lg-flex d-sm-block d-block">
-              <div class="col-lg-3 col-md-12 container p-1">
-                <h5>CV Generators</h5>
-                <div>
-                  <p>this is a cv maker application with existing templates. this application is made of laravel as a
-                    backend and bootstrap as a frontend </p>
-                </div>
-
-                <div class="mb-2">
-                  <a target="_blank" href="https://cv.code-bin.com" class=" fw-bold text-decoration-none">Live
-                    View</a>
-                </div>
+        <div class="carousel  ">
+          <div class="d-lg-flex d-sm-block d-block">
+            <div class="col-lg-3 col-md-12 container p-1">
+              <h5>CV Generators</h5>
+              <div>
+                <p>this is a cv maker application with existing templates. this application is made of laravel as a
+                  backend and bootstrap as a frontend </p>
               </div>
-              <div class="col-xl-9 col-sm ">
-                <img src="images/Screenshot 2023-11-13 at 17-17-32 ascvbuilder - Free CV Generator from Code Bin.png"
-                  width="100%" alt="Tampilan web CV generators">
+
+              <div class="mb-2">
+                <a target="_blank" href="https://cv.code-bin.com" class=" fw-bold text-decoration-none">Live
+                  View</a>
               </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="d-lg-flex d-sm-block d-block">
-              <div class="col-lg-3 col-md-12 container p-1">
-                <h5>Gparking</h5>
-                <div>
-                  <p>This application is a parking lot detection application based on yolov8 as a model of machine
-                    learning and flask as a backend framework and bootstrap as a frontend. This project is the result of
-                    participation in the matching fund program as a research assistant who implements coding.</p>
-                </div>
-
-                <div class="mb-2">
-                  <a href="#project" onclick="alert('Sorry but this preview is unavailable ')"
-                    class=" fw-bold text-decoration-none">Live
-                    View</a>
-                </div>
-              </div>
-              <div class="col-xl-9 col-sm ">
-                <img src="images/Screenshot 2023-11-14 at 00-09-26 2023-11-07 11-20-54.mkv.png" width="100%"
-                  alt="Tampilan web Gparking">
-              </div>
+            <div class="col-xl-9 col-sm ">
+              <img src="images/Screenshot 2023-11-13 at 17-17-32 ascvbuilder - Free CV Generator from Code Bin.png"
+                width="100%" alt="Tampilan web CV generators">
             </div>
           </div>
-          <div class="item">
-            <div class="d-lg-flex d-sm-block d-block">
-              <div class="col-lg-3 col-md-12 container p-1">
-                <h5>React Games</h5>
-                <div>
-                  <p>This is a simple game of remembering the order of a logo. this application is an applicaiton that
-                    I made when I first learned react. and only using react there is no backend. </p>
-                </div>
-
-                <div class="mb-2">
-                  <a target="_blank" href="https://react.code-bin.com/brain-games1"
-                    class=" fw-bold text-decoration-none">Live
-                    View</a>
-                </div>
+          <div class="d-lg-flex d-sm-block d-block">
+            <div class="col-lg-3 col-md-12 container p-1">
+              <h5>Gparking</h5>
+              <div>
+                <p>This application is a parking lot detection application based on yolov8 as a model of machine
+                  learning and flask as a backend framework and bootstrap as a frontend. This project is the result of
+                  participation in the matching fund program as a research assistant who implements coding.</p>
               </div>
-              <div class="col-xl-9 col-sm ">
-                <img src="images/Screenshot 2023-11-13 at 17-02-21 Vite React.png" width="100%"
-                  alt="Tampilan web React Games">
+
+              <div class="mb-2">
+                <a href="#project" onclick="alert('Sorry but this preview is unavailable ')"
+                  class=" fw-bold text-decoration-none">Live
+                  View</a>
               </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="d-lg-flex d-sm-block d-block">
-              <div class="col-lg-3 col-md-12 container p-1">
-                <h5>PT Ailangga Global Traveling</h5>
-                <div>
-                  <p>This application is an application that I made during my internship at pt airlangga global
-                    traveling. the function of this application is to record train, hotel and plane ticket bookings and
-                    invoice printing.</p>
-                </div>
-
-                <div class="mb-2">
-                  <a target="_blank" href="https://demoagt.code-bin.com" class=" fw-bold text-decoration-none">Live
-                    View</a>
-                </div>
-              </div>
-              <div class="col-xl-9 col-sm ">
-                <img src="images/Screenshot 2023-11-13 at 17-03-18 Login.png" width="100%" alt="Tampilan web AGT">
-              </div>
+            <div class="col-xl-9 col-sm ">
+              <img src="images/Screenshot 2023-11-14 at 00-09-26 2023-11-07 11-20-54.mkv.png" width="100%"
+                alt="Tampilan web Gparking">
             </div>
           </div>
-          <div class="item">
-            <div class="d-lg-flex d-sm-block d-block">
-              <div class="col-lg-3 col-md-12 container p-1">
-                <h5>Amalanku Fundrising</h5>
-                <div>
-                  <p>Amalanku is a fundraising application like kitabisa. This application uses laravel as the backend
-                    and tailwind as the front end. This application is connected to the midtrans payment gateway
-                    (sandbox). and became the biggest application that I developed myself.</p>
-                </div>
-
-                <div class="mb-2">
-                  <a target="_blank" href="https://amalanku.code-bin.com" class=" fw-bold text-decoration-none">Live
-                    View</a>
-                </div>
+          <div class="d-lg-flex d-sm-block d-block">
+            <div class="col-lg-3 col-md-12 container p-1">
+              <h5>React Games</h5>
+              <div>
+                <p>This is a simple game of remembering the order of a logo. this application is an applicaiton that
+                  I made when I first learned react. and only using react there is no backend. </p>
               </div>
-              <div class="col-xl-9 col-sm ">
-                <img src="images/Screenshot 2023-11-13 at 14-17-54 https __amalanku.code-bin.com.png" width="100%"
-                  alt="Tampilan web amalanku fundrising">
+
+              <div class="mb-2">
+                <a target="_blank" href="https://react.code-bin.com/brain-games1"
+                  class=" fw-bold text-decoration-none">Live
+                  View</a>
               </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="d-lg-flex d-sm-block d-block">
-              <div class="col-lg-3 col-md-12 container p-1">
-                <h5>Bacain</h5>
-                <div>
-                  <p>This application is made to provide the latest news and reading information to users. this
-                    application only consists of a front end and is made with native html css js. this application is my
-                    first application without a frontend framework.</p>
-                </div>
-
-                <div class="mb-2">
-                  <a target="_blank" href="https://desmuk.code-bin.com" class=" fw-bold text-decoration-none">Live
-                    View</a>
-                </div>
-              </div>
-              <div class="col-xl-9 col-sm ">
-                <img src="images/Screenshot 2023-11-13 at 14-15-27 Bacain.png" width="100%" alt="Tampilan web bacain">
-              </div>
+            <div class="col-xl-9 col-sm ">
+              <img src="images/Screenshot 2023-11-13 at 17-02-21 Vite React.png" width="100%"
+                alt="Tampilan web React Games">
             </div>
           </div>
-          <div class="item">
-            <div class="d-lg-flex d-sm-block d-block">
-              <div class="col-lg-3 col-md-12 container p-1">
-                <h5>Jogjasite</h5>
-                <div>
-                  <p>This application is made to provide cultural information from the city of Jogjakarta. this
-                    application is made with laravel as the backend, bootstrap as the frontend</p>
-                </div>
-
-                <div class="mb-2">
-                  <a target="_blank" href="https://jogjasite.code-bin.com" class=" fw-bold text-decoration-none">Live
-                    View</a>
-                </div>
+          <div class="d-lg-flex d-sm-block d-block">
+            <div class="col-lg-3 col-md-12 container p-1">
+              <h5>PT Ailangga Global Traveling</h5>
+              <div>
+                <p>This application is an application that I made during my internship at pt airlangga global
+                  traveling. the function of this application is to record train, hotel and plane ticket bookings and
+                  invoice printing.</p>
               </div>
-              <div class="col-xl-9 col-sm ">
-                <img src="images/Screenshot 2023-11-13 at 13-50-47 JogjaSite.png" width="100%"
-                  alt="Tampilan Web Jogjasite">
+
+              <div class="mb-2">
+                <a target="_blank" href="https://demoagt.code-bin.com" class=" fw-bold text-decoration-none">Live
+                  View</a>
               </div>
             </div>
-          </div>
-          <div class="item">
-            <div class="d-lg-flex d-sm-block d-block">
-              <div class="col-lg-3 col-md-12 container p-1">
-                <h5>Nusantara Adventure</h5>
-                <div>
-                  <p>This application is made to provide information on recommendations for tourist attractions in
-                    Malang. this application is only made with bootstrap without a backend. </p>
-                </div>
-
-                <div class="mb-2">
-                  <a target="_blank" href="https://nusantaraa.netlify.app" class=" fw-bold text-decoration-none">Live
-                    View</a>
-                </div>
-              </div>
-              <div class="col-xl-9 col-sm ">
-                <img src="images/Screenshot 2023-11-13 at 10-56-47 Nusantara.png" width="100%"
-                  alt="Tampilan web nusantara adventure">
-              </div>
+            <div class="col-xl-9 col-sm ">
+              <img src="images/Screenshot 2023-11-13 at 17-03-18 Login.png" width="100%" alt="Tampilan web AGT">
             </div>
           </div>
-          <div class="item">
-            <div class="d-lg-flex d-sm-block d-block">
-              <div class="col-lg-3 col-md-12 container p-1">
-                <h5>Clinic Reservation</h5>
-                <div>
-                  <p>this is the first application that I made completely with laravel and bootstrap. the features are
-                    simple but have a story of a process in it. </p>
-                </div>
-
-                <div class="mb-2">
-                  <a target="_blank" href="https://pwbf.code-bin.com" class=" fw-bold text-decoration-none">Live
-                    View</a>
-                </div>
+          <div class="d-lg-flex d-sm-block d-block">
+            <div class="col-lg-3 col-md-12 container p-1">
+              <h5>Amalanku Fundrising</h5>
+              <div>
+                <p>Amalanku is a fundraising application like kitabisa. This application uses laravel as the backend
+                  and tailwind as the front end. This application is connected to the midtrans payment gateway
+                  (sandbox). and became the biggest application that I developed myself.</p>
               </div>
-              <div class="col-xl-9 col-sm ">
-                <img src="images/pwbf.png" width="100%" alt="Tampilan Web pemesanan klinik">
+
+              <div class="mb-2">
+                <a target="_blank" href="https://amalanku.code-bin.com" class=" fw-bold text-decoration-none">Live
+                  View</a>
               </div>
             </div>
+            <div class="col-xl-9 col-sm ">
+              <img src="images/Screenshot 2023-11-13 at 14-17-54 https __amalanku.code-bin.com.png" width="100%"
+                alt="Tampilan web amalanku fundrising">
+            </div>
           </div>
+          <div class="d-lg-flex d-sm-block d-block">
+            <div class="col-lg-3 col-md-12 container p-1">
+              <h5>Bacain</h5>
+              <div>
+                <p>This application is made to provide the latest news and reading information to users. this
+                  application only consists of a front end and is made with native html css js. this application is my
+                  first application without a frontend framework.</p>
+              </div>
 
+              <div class="mb-2">
+                <a target="_blank" href="https://desmuk.code-bin.com" class=" fw-bold text-decoration-none">Live
+                  View</a>
+              </div>
+            </div>
+            <div class="col-xl-9 col-sm ">
+              <img src="images/Screenshot 2023-11-13 at 14-15-27 Bacain.png" width="100%" alt="Tampilan web bacain">
+            </div>
+          </div>
+          <div class="d-lg-flex d-sm-block d-block">
+            <div class="col-lg-3 col-md-12 container p-1">
+              <h5>Jogjasite</h5>
+              <div>
+                <p>This application is made to provide cultural information from the city of Jogjakarta. this
+                  application is made with laravel as the backend, bootstrap as the frontend</p>
+              </div>
+
+              <div class="mb-2">
+                <a target="_blank" href="https://jogjasite.code-bin.com" class=" fw-bold text-decoration-none">Live
+                  View</a>
+              </div>
+            </div>
+            <div class="col-xl-9 col-sm ">
+              <img src="images/Screenshot 2023-11-13 at 13-50-47 JogjaSite.png" width="100%"
+                alt="Tampilan Web Jogjasite">
+            </div>
+          </div>
+          <div class="d-lg-flex d-sm-block d-block">
+            <div class="col-lg-3 col-md-12 container p-1">
+              <h5>Nusantara Adventure</h5>
+              <div>
+                <p>This application is made to provide information on recommendations for tourist attractions in
+                  Malang. this application is only made with bootstrap without a backend. </p>
+              </div>
+
+              <div class="mb-2">
+                <a target="_blank" href="https://nusantaraa.netlify.app" class=" fw-bold text-decoration-none">Live
+                  View</a>
+              </div>
+            </div>
+            <div class="col-xl-9 col-sm ">
+              <img src="images/Screenshot 2023-11-13 at 10-56-47 Nusantara.png" width="100%"
+                alt="Tampilan web nusantara adventure">
+            </div>
+          </div>
+          <div class="d-lg-flex d-sm-block d-block">
+            <div class="col-lg-3 col-md-12 container p-1">
+              <h5>Clinic Reservation</h5>
+              <div>
+                <p>this is the first application that I made completely with laravel and bootstrap. the features are
+                  simple but have a story of a process in it. </p>
+              </div>
+
+              <div class="mb-2">
+                <a target="_blank" href="https://pwbf.code-bin.com" class=" fw-bold text-decoration-none">Live
+                  View</a>
+              </div>
+            </div>
+            <div class="col-xl-9 col-sm ">
+              <img src="images/pwbf.png" width="100%" alt="Tampilan Web pemesanan klinik">
+            </div>
+          </div>
         </div>
 
       </div>
-      <div class="education-section px-3 px-lg-4 pb-4">
-        <h2 class="h3 mb-4">Education</h2>
-        <div class="timeline">
-          <div class="timeline-card timeline-card-success card shadow-sm">
-            <div class="card-body">
-              <div class="h5 mb-1">D4 Teknik Informatika <span class="text-muted h6">Universitas Airlangga</span></div>
-              <div class="text-muted text-small mb-2">2021 - Now</div>
-              <!-- <div>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative
+
+    </div>
+    <div class="education-section px-3 px-lg-4 pb-4">
+      <h2 class="h3 mb-4">Education</h2>
+      <div class="timeline">
+        <div class="timeline-card timeline-card-success card shadow-sm">
+          <div class="card-body">
+            <div class="h5 mb-1">D4 Teknik Informatika <span class="text-muted h6">Universitas Airlangga</span></div>
+            <div class="text-muted text-small mb-2">2021 - Now</div>
+            <!-- <div>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative
                   approaches to corporate strategy foster collaborative thinking to further the overall value
                   proposition.</div> -->
-            </div>
           </div>
-          <div class="timeline-card timeline-card-success card shadow-sm">
-            <div class="card-body">
-              <div class="h5 mb-1">Jurusan IPA <span class="text-muted h6">SMAN 1 KRIAN</span></div>
-              <div class="text-muted text-small mb-2">2018 - 2021</div>
-            </div>
+        </div>
+        <div class="timeline-card timeline-card-success card shadow-sm">
+          <div class="card-body">
+            <div class="h5 mb-1">Jurusan IPA <span class="text-muted h6">SMAN 1 KRIAN</span></div>
+            <div class="text-muted text-small mb-2">2018 - 2021</div>
+          </div>
 
-          </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
   <footer class="pt-4 pb-4 text-muted text-center d-print-none">
     <div class="container">
@@ -526,9 +584,20 @@
   <script src="scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
   <script src="scripts/aos.js?ver=1.2.0"></script>
   <script src="scripts/main.js?ver=1.2.0"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
+    integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
   <script>
+    $(document).ready(function () {
+      $('.carousel').slick({
+        infinite: true,
+        dots: true,
+
+        nextArrow: `<div class="icon-right"><div class="arrow-right" style="scale:0.50"></div></div>`,
+        prevArrow: `<div class="icon-right" style="left:-10px"><div class="arrow-right" style="transform:rotateY(180deg);scale:0.50"></div></div>`,
+      });
+    });
     var progressBarElements = document.getElementsByClassName('progress-bar');
 
     for (var i = 0; i < progressBarElements.length; i++) {
